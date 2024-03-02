@@ -5,12 +5,15 @@ def line_count(infile):
         lines = file.readlines()
         line_count = len(lines)
         print(line_count)
-if __name__ == "__main__":
+
+if __name__ == "__main_":
     import os
     try:
         from src.util import get_repository_root
     except ImportError:
         from util import get_repository_root
+
+    # Test line_count with a file from the data directory
     data_directory = get_repository_root() / "data"
     infile = data_directory / "ex_5_2-data.csv"
     line_count(infile)
